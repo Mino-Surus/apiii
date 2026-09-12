@@ -1,0 +1,100 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Страница-1" id="LlJEezDEmUqZMoMXNKlm">
+    <mxGraphModel dx="1672" dy="643" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-5" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Задачи" vertex="1">
+          <mxGeometry height="180" width="140" x="144" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-6" parent="JOsdxrejKpd2vhXwIAjv-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="id" vertex="1">
+          <mxGeometry height="30" width="140" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-7" parent="JOsdxrejKpd2vhXwIAjv-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="Название" vertex="1">
+          <mxGeometry height="30" width="140" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-29" parent="JOsdxrejKpd2vhXwIAjv-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="Описание" vertex="1">
+          <mxGeometry height="30" width="140" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-30" parent="JOsdxrejKpd2vhXwIAjv-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="Дата" vertex="1">
+          <mxGeometry height="30" width="140" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-8" parent="JOsdxrejKpd2vhXwIAjv-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="Дедлайн" vertex="1">
+          <mxGeometry height="30" width="140" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-9" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Теги_задач" vertex="1">
+          <mxGeometry height="90" width="140" x="570" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-10" parent="JOsdxrejKpd2vhXwIAjv-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="id" vertex="1">
+          <mxGeometry height="30" width="140" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-11" parent="JOsdxrejKpd2vhXwIAjv-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="Название" vertex="1">
+          <mxGeometry height="30" width="140" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-13" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Теги_в_задачах" vertex="1">
+          <mxGeometry height="90" width="140" x="360" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-14" parent="JOsdxrejKpd2vhXwIAjv-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="id_задачи" vertex="1">
+          <mxGeometry height="30" width="140" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-15" parent="JOsdxrejKpd2vhXwIAjv-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="id_тега" vertex="1">
+          <mxGeometry height="30" width="140" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-27" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="todo list" vertex="1">
+          <mxGeometry height="30" width="60" x="384" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-31" edge="1" parent="1" source="JOsdxrejKpd2vhXwIAjv-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="JOsdxrejKpd2vhXwIAjv-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-33" edge="1" parent="1" source="JOsdxrejKpd2vhXwIAjv-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="JOsdxrejKpd2vhXwIAjv-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-45" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="GET /tags/{id_тега}/tasks - получить задачи, помеченные указанным тегом" vertex="1">
+          <mxGeometry height="30" width="390" x="297.5" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-46" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="POST /tasks/{id_задачи}/tags - добавить тег к задаче" vertex="1">
+          <mxGeometry height="30" width="415" x="297.5" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-47" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="DELETE /tasks/{id_задачи}/tags/{id_тега} - добавить тег от задаче" vertex="1">
+          <mxGeometry height="30" width="415" x="297.5" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-50" parent="1" style="swimlane;startSize=0;fillColor=#e1d5e7;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="200" width="365" x="320" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-43" parent="JOsdxrejKpd2vhXwIAjv-50" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="POST /tags - создать новый тег" vertex="1">
+          <mxGeometry height="30" width="260" x="40" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-40" parent="JOsdxrejKpd2vhXwIAjv-50" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="GET /tags - получить список всех тегов" vertex="1">
+          <mxGeometry height="30" width="310" x="20" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-41" parent="JOsdxrejKpd2vhXwIAjv-50" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="GET /tags/1 - получить определенный тег" vertex="1">
+          <mxGeometry height="30" width="310" x="20" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-42" parent="JOsdxrejKpd2vhXwIAjv-50" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="PATCH /tags/1 - внести изменения в какой то тег" vertex="1">
+          <mxGeometry height="30" width="310" x="30" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-44" parent="JOsdxrejKpd2vhXwIAjv-50" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="DELETE /tags/1 - удалить определенный тег" vertex="1">
+          <mxGeometry height="30" width="260" x="40" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-25" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="GET /tasks - получить список всех задач" vertex="1">
+          <mxGeometry height="30" width="260" x="360" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-26" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="POST /tasks - создать новую задачу" vertex="1">
+          <mxGeometry height="30" width="260" x="360" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-34" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="DELETE /tasks/1 - удалить задачу" vertex="1">
+          <mxGeometry height="30" width="260" x="350" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-35" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="PATCH /tasks/1 - внести изменения в какую то задачу" vertex="1">
+          <mxGeometry height="30" width="310" x="350" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-37" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="GET /tasks/undone - получить список невыполненных задач" vertex="1">
+          <mxGeometry height="30" width="350" x="350" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="JOsdxrejKpd2vhXwIAjv-38" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="GET /tasks/1 - получить определенную задачу по id" vertex="1">
+          <mxGeometry height="30" width="310" x="340" y="360" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
