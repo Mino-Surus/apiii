@@ -1,7 +1,9 @@
 from django.contrib import admin
-from .models import Tags, Expenses
+from .models import Tag, Expense, ExpenseTag
 
-admin.site.register(Tags)
-admin.site.register(Expenses)
+admin.site.register(Tag)
+admin.site.register(Expense)
+admin.site.register(ExpenseTag)
+
 
 

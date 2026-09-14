@@ -1,0 +1,15 @@
+POST   /expenses                 — создать новый расход
+PATCH  /expenses/1               — изменить расход
+DELETE /expenses/1               — удалить расход
+GET    /expenses                 — получить список всех расходов
+GET    /expenses/1               — получить расход по id
+GET    /expenses/totals          — итоги за неделю/месяц/год от даты
+POST   /tags                     — создать новый тег
+GET    /tags                     — получить список всех тегов
+GET    /tags/1                   — получить определённый тег
+PATCH  /tags/1                   — изменить тег
+DELETE /tags/1                   — удалить тег
+GET    /tags/1/expenses          — получить расходы с указанным тегом
+GET    /expenses/1/tags          — получить теги указанного расхода
+POST   /expenses/1/tags          — добавить тег к расходу
+DELETE /expenses/1/tags/1        — убрать тег у расхода
