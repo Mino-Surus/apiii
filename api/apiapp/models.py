@@ -7,7 +7,7 @@ class Tag(models.Model):
         return self.name
 
 class Expense(models.Model):
-    title = models.CharField(max_length=200)
+    name = models.CharField(max_length=200)
     amount = models.DecimalField(max_digits=12, decimal_places=2)
     spent_at = models.DateField()
 

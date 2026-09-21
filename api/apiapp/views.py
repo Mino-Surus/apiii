@@ -1,9 +1,9 @@
 from django.views import View
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404
-from .models import Tag, Expense
+from .models import Tag, Expense, ExpenseTag
 from json import loads
-from .forms import TagForm
+from .forms import TagForm, ExpenseForm, ExpenseTagForm
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 
@@ -28,7 +28,7 @@ class ViewTag(View):
              form = TagForm(new_data)
              if form .is_valid():
                   tag = form.save()
-                  return self.get(request, tag.pk)
+                  return JsonResponse({'id': tag.id, 'name': tag.name})
              else:
                   return JsonResponse(
                        {'status': 'error', 'code': 400},
@@ -38,18 +38,59 @@ class ViewTag(View):
 @method_decorator(csrf_exempt, 'dispatch')
 class ViewExpences(View):
     def get(self, request):
-            expences = Expense.objects.all()
-            expence_list = []
-            for expence in expences:
-                expence_list.append({
-                    'title': expence.title,
-                    'amount': expence.amount,
-                    'spent_at': expence.spent_at
+            expenses = Expense.objects.all()
+            expense_list = []
+            for expense in expenses:
+                expense_list.append({
+                    'title': expense.title,
+                    'amount': expense.amount,
+                    'spent_at': expense.spent_at
                 })
             obj = {
-                'data': expence_list
+                'data': expense_list
             }
             return JsonResponse(obj)
+    def post(self, request):
+            raw_json = request.body
+            new_data = loads(raw_json)
+        
+            form = ExpenseForm(new_data)
+            if form .is_valid():
+                expense = form.save()
+                return JsonResponse({'id': expense.id, 'name': expense.name, 'amount': expense.amount, 'spent_at': expense.spent_at, })
+            else:
+                return JsonResponse(
+                    {'status': 'error', 'code': 400},
+                    status=400
+                )
+
+@method_decorator(csrf_exempt, 'dispatch')
+class ViewExpenseTag(View):
+    def get(self, request):
+            expensetags = ExpenseTag.objects.all()
+            expensetag_list = []
+            for expensetag in expensetags:
+                expensetag_list.append({
+                    'expense': expensetag.expense,
+                    'tag': expensetag.tag
+                })
+            obj = {
+                'data': expensetag_list
+            }
+            return JsonResponse(obj)
+    def post(self, request):
+            raw_json = request.body
+            new_data = loads(raw_json)
+        
+            form = ExpenseTagForm(new_data)
+            if form .is_valid():
+                expensetag = form.save()
+                return JsonResponse({'expense': expensetag.expense, 'tag': expensetag.tag })
+            else:
+                return JsonResponse(
+                    {'status': 'error', 'code': 400},
+                    status=400
+                )
 
 # Реализовать модели согласно спроектированной бд
 # Реализовать Get-запросы API
