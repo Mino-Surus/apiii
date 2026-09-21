@@ -42,7 +42,7 @@ class ViewExpences(View):
             expense_list = []
             for expense in expenses:
                 expense_list.append({
-                    'title': expense.title,
+                    'name': expense.name,
                     'amount': expense.amount,
                     'spent_at': expense.spent_at
                 })
@@ -71,8 +71,10 @@ class ViewExpenseTag(View):
             expensetag_list = []
             for expensetag in expensetags:
                 expensetag_list.append({
-                    'expense': expensetag.expense,
-                    'tag': expensetag.tag
+                     'expense_id': expensetag.expense.id,                 
+                        'expense_name': expensetag.expense.name,             
+                        'tag_id': expensetag.tag.id,                          
+                        'tag_name': expensetag.tag.name,
                 })
             obj = {
                 'data': expensetag_list
@@ -85,7 +87,7 @@ class ViewExpenseTag(View):
             form = ExpenseTagForm(new_data)
             if form .is_valid():
                 expensetag = form.save()
-                return JsonResponse({'expense': expensetag.expense, 'tag': expensetag.tag })
+                return JsonResponse({'expense': expensetag.expense.id, 'tag': expensetag.tag.id})
             else:
                 return JsonResponse(
                     {'status': 'error', 'code': 400},

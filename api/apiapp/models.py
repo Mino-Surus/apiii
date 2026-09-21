@@ -12,7 +12,7 @@ class Expense(models.Model):
     spent_at = models.DateField()
 
     def __str__(self):
-        return f"{self.title} — {self.amount}"
+        return f"{self.name} — {self.amount}"
 
 
 class ExpenseTag(models.Model):
