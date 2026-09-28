@@ -44,6 +44,19 @@ class ViewTag(View):
               return JsonResponse(
                    {'status': 'error', 'code': 400, 'errors': form.errors},status=400
               )
+    def patch(self, request, pk):
+         tag = get_object_or_404(Tag, pk=pk)
+         new_data = loads(request.body)
+         if 'name' not in new_data:
+              new_data['name'] = tag.name
+         form = TagForm(new_data, instance=tag)
+         if form.is_valid():
+              tag = form.save()
+              return JsonResponse({'id': tag.id, 'name': tag.name})
+         else:
+              return JsonResponse(
+                   {'status': 'error', 'code': 400, 'errors': form.errors},status=400
+              )
              
 @method_decorator(csrf_exempt, 'dispatch')
 class ViewExpences(View):
@@ -93,6 +106,23 @@ class ViewExpences(View):
                     {'status': 'error', 'code': 400, 'errors': form.errors},
                     status=400
                 )
+    def patch(self, request, pk):
+            expence = get_object_or_404(Expense, pk=pk)
+            new_data = loads(request.body)
+            if 'name' not in new_data:
+                new_data['name'] = expense.name
+            if 'amount' not in new_data:
+                new_data['amount'] = expense.amount
+            if 'spent_at' not in new_data:
+                new_data['spent_at'] = expense.spent_at
+            form = ExpenseForm(new_data, instance=expense)
+            if form.is_valid():
+                expense = form.save()
+                return JsonResponse({'id': expense.id, 'name': expense.name, 'amount': expense.amount, 'spent_at': expense.spent_at,})
+            else:
+                return JsonResponse(
+                    {'status': 'error', 'code': 400, 'errors': form.errors},status=400
+                )
 
 @method_decorator(csrf_exempt, 'dispatch')
 class ViewExpenseTag(View):
@@ -139,6 +169,24 @@ class ViewExpenseTag(View):
                     {'status': 'error', 'code': 400, 'errors': form.errors},
                     status=400
                 )
+    def patch(self, request, pk):
+            expensetag = get_object_or_404(ExpenseTag, pk=pk)
+            new_data = loads(request.body)
+            if 'name' not in new_data:
+                new_data['name'] = expense.name
+            if 'amount' not in new_data:
+                new_data['amount'] = expense.amount
+            if 'spent_at' not in new_data:
+                new_data['spent_at'] = expense.spent_at
+            form = ExpenseForm(new_data, instance=expense)
+            if form.is_valid():
+                expense = form.save()
+                return JsonResponse({'id': expense.id, 'name': expense.name, 'amount': expense.amount, 'spent_at': expense.spent_at,})
+            else:
+                return JsonResponse(
+                    {'status': 'error', 'code': 400, 'errors': form.errors},status=400
+                )
+
 
 # Реализовать модели согласно спроектированной бд
 # Реализовать Get-запросы API
