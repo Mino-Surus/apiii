@@ -107,7 +107,7 @@ class ViewExpences(View):
                     status=400
                 )
     def patch(self, request, pk):
-            expence = get_object_or_404(Expense, pk=pk)
+            expense = get_object_or_404(Expense, pk=pk)
             new_data = loads(request.body)
             if 'name' not in new_data:
                 new_data['name'] = expense.name
@@ -172,22 +172,15 @@ class ViewExpenseTag(View):
     def patch(self, request, pk):
             expensetag = get_object_or_404(ExpenseTag, pk=pk)
             new_data = loads(request.body)
-            if 'name' not in new_data:
-                new_data['name'] = expense.name
-            if 'amount' not in new_data:
-                new_data['amount'] = expense.amount
-            if 'spent_at' not in new_data:
-                new_data['spent_at'] = expense.spent_at
-            form = ExpenseForm(new_data, instance=expense)
+            if 'expense' not in new_data:
+                new_data['expense'] = expensetag.expense.id
+            if 'tag' not in new_data:
+                new_data['tag'] = expensetag.tag.id
+            form = ExpenseTagForm(new_data, instance=expensetag)
             if form.is_valid():
-                expense = form.save()
-                return JsonResponse({'id': expense.id, 'name': expense.name, 'amount': expense.amount, 'spent_at': expense.spent_at,})
+                expensetag = form.save()
+                return JsonResponse({'expense': expensetag.expense.id, 'tag': expensetag.tag.id})
             else:
                 return JsonResponse(
                     {'status': 'error', 'code': 400, 'errors': form.errors},status=400
                 )
-
-
-# Реализовать модели согласно спроектированной бд
-# Реализовать Get-запросы API
-# Реализовать Post-запросы API
