@@ -57,6 +57,12 @@ class ViewTag(View):
               return JsonResponse(
                    {'status': 'error', 'code': 400, 'errors': form.errors},status=400
               )
+
+    def delete(self, request, pk):
+        tag = get_object_or_404(Tag, pk=pk)
+        tag.delete()
+        return JsonResponse({'status': 'ok'}, status=204)
+
              
 @method_decorator(csrf_exempt, 'dispatch')
 class ViewExpences(View):
@@ -123,6 +129,11 @@ class ViewExpences(View):
                 return JsonResponse(
                     {'status': 'error', 'code': 400, 'errors': form.errors},status=400
                 )
+            
+    def delete(self, request, pk):
+            tag = get_object_or_404(Expense, pk=pk)
+            tag.delete()
+            return JsonResponse({'status': 'ok'}, status=204)
 
 @method_decorator(csrf_exempt, 'dispatch')
 class ViewExpenseTag(View):
@@ -184,3 +195,8 @@ class ViewExpenseTag(View):
                 return JsonResponse(
                     {'status': 'error', 'code': 400, 'errors': form.errors},status=400
                 )
+
+    def delete(self, request, pk, tag_id):
+        et = get_object_or_404(ExpenseTag, expense_id=pk, tag_id=tag_id)
+        et.delete()
+        return JsonResponse({'status': 'ok'}, status=204)
